@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="description" content="Midnight Cookie Raid — a side-scrolling cookie-factory platformer." />
+  <title>Midnight Cookie Raid</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="top">
+      <h1>Midnight Cookie Raid</h1>
+      <p class="tagline">Raid the night shift. Stay fat. Reach the vault.</p>
+    </header>
+
+    <div id="game-wrap">
+      <canvas id="game" width="640" height="360" aria-label="Midnight Cookie Raid game canvas"></canvas>
+    </div>
+
+    <div class="controls-help" id="controls-help">
+      <div class="help-row">
+        <span><kbd>←</kbd><kbd>→</kbd> / <kbd>A</kbd><kbd>D</kbd> Run (hold opposite to reverse)</span>
+        <span><kbd>↑</kbd> / <kbd>W</kbd> Jump</span>
+        <span><kbd>Space</kbd> Burp (uses Fizzy)</span>
+      </div>
+      <div class="help-row">
+        <span><kbd>P</kbd> / <kbd>Esc</kbd> Pause</span>
+        <span><kbd>M</kbd> Mute</span>
+        <span><kbd>Enter</kbd> Start / Title</span>
+      </div>
+    </div>
+
+    <div class="mobile-pad" id="mobile-pad">
+      <div class="pad-left">
+        <button type="button" id="btn-left" aria-label="Move left">◀</button>
+        <button type="button" id="btn-right" aria-label="Move right">▶</button>
+      </div>
+      <div class="pad-mid">
+        <button type="button" id="btn-start" class="btn-start" aria-label="Start">START</button>
+      </div>
+      <div class="pad-right">
+        <button type="button" id="btn-burp" aria-label="Burp">BURP</button>
+        <button type="button" id="btn-jump" aria-label="Jump">JUMP</button>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <p>Original tribute to classic 1990s browser factory-raid platformers. No licensed characters or assets.</p>
+    </footer>
+  </div>
+
+  <!-- Script order: audio → entities → player → levels → game -->
+  <script src="js/audio.js"></script>
+  <script src="js/entities.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/levels.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
